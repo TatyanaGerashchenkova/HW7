@@ -4,7 +4,7 @@
 
 void F(int M, int N)
 {
-    if(M != N)
+    if(M != N)    
     {
         if(M > N)
         {
