@@ -24,67 +24,67 @@ F(M);
 // Задача 2: Напишите программу вычисления функции Аккермана с помощью рекурсии. 
 // Даны два неотрицательных числа m и n.
 
-// using System;
+using System;
 
-// class Program
-// {
-//     static int Ackermann(int m, int n)
-//     {
-//         if (m == 0)
-//         {
-//             return n + 1;
-//         }
-//         else if (n == 0 && m >0)
-//         {
-//             return Ackermann(m - 1, 1);
-//         }
-//         else
-//         {
-//             return Ackermann(m - 1, Ackermann(m, n - 1));
-//         }
-//     }
+class Program
+{
+    static int Ackermann(int m, int n)
+    {
+        if (m == 0)
+        {
+            return n + 1;
+        }
+        else if (n == 0 && m >0)
+        {
+            return Ackermann(m - 1, 1);
+        }
+        else
+        {
+            return Ackermann(m - 1, Ackermann(m, n - 1));
+        }
+    }
 
-//     static void Main(string[] args)
-//     {
-//         // Ввод значений m и n
-//         Console.Write("Input nonnegative number m: ");
-//         int m = int.Parse(Console.ReadLine());
+    static void Main(string[] args)
+    {
+        // Ввод значений m и n
+        Console.Write("Input nonnegative number m: ");
+        int m = int.Parse(Console.ReadLine());
 
-//         Console.Write("input nonnegative number n: ");
-//         int n = int.Parse(Console.ReadLine());
+        Console.Write("input nonnegative number n: ");
+        int n = int.Parse(Console.ReadLine());
 
-//         // Вычисление и вывод результата функции Аккермана
-//         int result = Ackermann(m, n);
-//         Console.WriteLine($"Result F Ackerman for m = {m} and n = {n}: {result}");
-//     }
-// }
+        // Вычисление и вывод результата функции Аккермана
+        int result = Ackermann(m, n);
+        Console.WriteLine($"Result F Ackerman for m = {m} and n = {n}: {result}");
+    }
+}
 
 // Задача 3: Задайте произвольный массив. 
 // Выведете его элементы, начиная с конца. Использовать рекурсию, не использовать циклы.
 
-// using System;
+using System;
 
-// class Program
-// {
-//     static void PrintArrayReversed(int[] array, int index)
-//     {
-//         // Если индекс равен -1 (вышли за пределы массива)
-//         if (index == -1)
-//         {
-//             return;
-//         }
+class Program
+{
+    static void PrintArrayReversed(int[] array, int index)
+    {
+        // Если индекс равен -1 (вышли за пределы массива)
+        if (index == -1)
+        {
+            return;
+        }
 
-//         // Рекурсия: вывод текущего элемента и вызов функции для предыдущего элемента
-//         Console.Write(array[index] + " ");
-//         PrintArrayReversed(array, index - 1);
-//     }
+        // Рекурсия: вывод текущего элемента и вызов функции для предыдущего элемента
+        Console.Write(array[index] + " ");
+        PrintArrayReversed(array, index - 1);
+    }
 
-//     static void Main(string[] args)
-//     {
-//         // Произвольный массив
-//         int[] array = { 1, 2, 3, 4, 5 };
+    static void Main(string[] args)
+    {
+        // Произвольный массив
+        int[] array = { 1, 2, 3, 4, 5 };
 
-//         // Вызов функции для печати элементов массива, начиная с конца
-//         PrintArrayReversed(array, array.Length - 1);
-//     }
-// }
+        // Вызов функции для печати элементов массива, начиная с конца
+        PrintArrayReversed(array, array.Length - 1);
+    }
+}
